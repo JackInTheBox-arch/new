@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@300;500;700&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Space Grotesk", sans-serif;
+  
+  --color-surface-dim: #131315;
+  --color-surface-container-highest: #353437;
+  --color-primary-fixed-dim: #ddb7ff;
+  --color-surface-variant: #353437;
+  --color-outline: #988d9f;
+  --color-background: #131315;
+  --color-secondary: #4cd7f6;
+  --color-primary: #ddb7ff;
+  --color-surface-container-low: #1c1b1d;
+  --color-surface-container-lowest: #0e0e10;
+  --color-on-surface: #e5e1e4;
+  --color-on-surface-variant: #cfc2d6;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface font-sans;
+    background-image: 
+      radial-gradient(circle at 50% 50%, rgba(221, 183, 255, 0.05) 0%, transparent 50%),
+      radial-gradient(1px 1px at 20px 30px, #e5e1e4 0.1, transparent),
+      radial-gradient(1px 1px at 150px 100px, #988d9f 0.1, transparent),
+      radial-gradient(1.5px 1.5px at 280px 450px, #4cd7f6 0.1, transparent);
+    background-size: 100% 100%, 300px 300px, 400px 400px, 500px 500px;
+  }
+}
+
+.glass-panel {
+  background: rgba(53, 52, 55, 0.4);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(152, 141, 159, 0.15);
+}
+
+.combat-zone-gradient {
+  background: radial-gradient(circle, rgba(183, 109, 255, 0.1) 0%, rgba(19, 19, 21, 0) 70%);
+}
+
+.aura-glow {
+  box-shadow: 0 0 40px rgba(221, 183, 255, 0.06);
+}
